@@ -17,7 +17,7 @@ require "action_view/railtie"
 
 Bundler.require(*Rails.groups)
 
-module SampleApp
+module Playground
   class Application < Rails::Application
     config.active_record.default_timezone = :local
     config.generators do |generate|

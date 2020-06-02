@@ -6,15 +6,15 @@ default: &default
 
 development:
   <<: *default
-  database: <%= ENV["DB_NAME"] || "sample_app_development" %>
+  database: playground_development
   username: <%= ENV["DB_USER"] %>
   password: <%= ENV["DB_PASSWORD"] %>
   host: <%= ENV["DB_HOST"] %>
-  port: <%= ENV["DB_PORT"] %>
+  port: <%= ENV.fetch("DB_PORT") { 5432 } %>
 
 test:
   <<: *default
-  database: sample_app_test
+  database: playground_test
 
 production:
   <<: *default
