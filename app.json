@@ -1,0 +1,12 @@
+{
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "bundle exec standardrb && bundle exec rspec"
+      },
+      "addons": [
+        "heroku-postgresql:in-dyno"
+      ]
+    }
+  }
+}
