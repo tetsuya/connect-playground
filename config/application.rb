@@ -23,7 +23,6 @@ module Playground
     config.generators do |generate|
       generate.helper false
       generate.javascripts false
-      generate.request_specs false
       generate.routing_specs false
       generate.stylesheets false
       generate.system_tests = nil
