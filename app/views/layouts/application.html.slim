@@ -1,0 +1,11 @@
+doctype html
+html lang="ja"
+  head
+    title Playground
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag "application", media: "all"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+  body
+    = yield
+  = javascript_pack_tag "application"
