@@ -1,0 +1,25 @@
+.section
+  .container
+
+    h1.title List of Coffees
+
+    table.table
+      thead
+        tr
+          th id
+          th Name
+          th Country
+          th Variety
+          th Process
+          th Net weight
+          th Price
+      tbody
+        - @coffees.each do |coffee|
+          tr
+            td = coffee.id
+            td = link_to coffee.name
+            td = coffee.country__c
+            td = coffee.variety__c
+            td = coffee.process__c
+            td = "#{coffee.net_weight__c}g"
+            td = number_to_currency coffee.price__c, unit: "¥", precision: 0
