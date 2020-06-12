@@ -1,7 +1,16 @@
 {
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
   "environments": {
     "test": {
       "scripts": {
+        "test-setup": "yarn install",
         "test": "bundle exec standardrb && bundle exec rspec"
       },
       "addons": [
