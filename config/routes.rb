@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  get "/ping", to: "ping#index"
+  root "page#index"
   get "/connect", to: "connects#index"
 end
