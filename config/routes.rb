@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   root "page#index"
-  get "/connect", to: "connects#index"
+  get "/coffees", to: "coffees#index"
 end
